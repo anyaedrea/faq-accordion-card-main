@@ -11,33 +11,35 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app.css" />
     <title>Frontend Mentor | FAQ Accordion Card</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
-      <span class="container">
+      <div class="container">
+        <div class="faq-img">
+          <img
+            class="main-img"
+            src="./images/illustration-woman-online-mobile.svg"
+          />
+          <img class="background-img" src="./images/bg-pattern-mobile.svg" />
+        </div>
         <h1>FAQ</h1>
-        <img
-          class="faq-img"
-          src="./images/illustration-woman-online-mobile.svg"
-        />
         <ul id="faq">
           <li class="faq-item">
-            <button class="expand-btn">
-              <span class="question">How many team members can I invite?</span>
-              <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+            <button class="faq-btn">
+              <span class="faq-btn-content"
+                ><span class="question"
+                  >How many team members can I invite?</span
+                >
+                <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+              </span>
             </button>
             <span class="answer">
               You can invite up to 2 additional users on the Free plan. There is
@@ -45,11 +47,13 @@
             </span>
           </li>
           <li class="faq-item">
-            <button class="expand-btn">
-              <span class="question"
-                >What is the maximum file upload size?</span
-              >
-              <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+            <button class="faq-btn">
+              <span class="faq-btn-content"
+                ><span class="question"
+                  >What is the maximum file upload size?</span
+                >
+                <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+              </span>
             </button>
             <span class="answer">
               No more than 2GB. All files in your account must fit your allotted
@@ -57,9 +61,11 @@
             </span>
           </li>
           <li class="faq-item">
-            <button class="expand-btn">
-              <span class="question">How do I reset my password?</span>
-              <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+            <button class="faq-btn">
+              <span class="faq-btn-content"
+                ><span class="question">How do I reset my password?</span>
+                <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+              </span>
             </button>
             <span class="answer">
               Click “Forgot password” from the login page or “Change password”
@@ -67,9 +73,11 @@
             </span>
           </li>
           <li class="faq-item">
-            <button class="expand-btn">
-              <span class="question">Can I cancel my subscription?</span>
-              <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+            <button class="faq-btn">
+              <span class="faq-btn-content"
+                ><span class="question">Can I cancel my subscription?</span>
+                <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+              </span>
             </button>
             <span class="answer">
               Yes! Send us a message and we’ll process your request no questions
@@ -77,9 +85,13 @@
             </span>
           </li>
           <li class="faq-item">
-            <button class="expand-btn">
-              <span class="question">Do you provide additional support?</span>
-              <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+            <button class="faq-btn">
+              <span class="faq-btn-content"
+                ><span class="question"
+                  >Do you provide additional support?</span
+                >
+                <img class="expand-icon" src="./images/icon-arrow-down.svg" />
+              </span>
             </button>
             <span class="answer">
               Chat and email support is available 24/7. Phone lines are open
@@ -87,7 +99,7 @@
             </span>
           </li>
         </ul>
-      </span>
+      </div>
     </main>
 
     <span class="attribution">
