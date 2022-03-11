@@ -23,6 +23,7 @@ body {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -50,13 +51,16 @@ h1 {
 .faq-img {
   position: absolute;
   top: 2em;
-  max-width: 25em;
+  min-width: 15em;
+  min-height: 15em;
 }
 
 .main-img {
   display: block;
   z-index: 3;
   position: absolute;
+  content: url(./images/illustration-woman-online-mobile.svg);
+  width: 100%;
 }
 
 .background-img {
@@ -65,6 +69,7 @@ h1 {
   position: relative;
   top: 7em;
   width: 100%;
+  content: url(./images/bg-pattern-mobile.svg);
 }
 
 ul {
@@ -129,4 +134,51 @@ ul {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 40em) {
+  .container {
+    flex-direction: row;
+    padding: 4em 2em;
+    margin: 3em;
+    max-width: 60%;
+    /* gap: 2em; */
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  main {
+    align-items: flex-start;
+    gap: 2em;
+  }
+
+  .faq-img {
+    position: relative;
+    top: 0;
+    left: -8em;
+    min-width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .main-img {
+    content: url(./images/illustration-woman-online-desktop.svg);
+  }
+
+  .background-img {
+    content: url(./images/bg-pattern-desktop.svg);
+    top: -15em;
+    width: 150%;
+    position: absolute;
+  }
+
+  .box-img {
+    content: url(./images/illustration-box-desktop.svg);
+    z-index: 5;
+  }
 }
