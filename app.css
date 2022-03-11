@@ -1,3 +1,4 @@
+html,
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +6,14 @@ body {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  min-height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Kumbh Sans", sans-serif;
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
@@ -14,6 +23,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .container {
   background-color: white;
   border-radius: 20px;
@@ -21,9 +31,10 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 2em;
-  margin: 2em;
+  margin: 3em;
   box-shadow: 0 2em 2em hsla(237, 12%, 33%, 0.5);
   max-width: 75%;
+  width: 100%;
 
   position: relative;
   top: 7em;
@@ -36,7 +47,6 @@ h1 {
 }
 
 .faq-img {
-  border: 1px solid red;
   position: absolute;
   top: -7em;
   max-width: 25em;
@@ -88,6 +98,24 @@ ul {
 .faq-btn-content {
   display: flex;
   justify-content: space-between;
+}
+
+.question {
+  margin-right: 1em;
+}
+
+.faq-item .question:hover {
+  color: orange;
+}
+
+.faq-item.selected .question {
+  font-weight: 700;
+  color: hsl(237, 12%, 33%);
+}
+
+.faq-item.selected img {
+  transform: rotate(180deg);
+  transition: 250ms ease all;
 }
 
 .expand-icon {
